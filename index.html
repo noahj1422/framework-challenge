@@ -4,16 +4,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
-    <link rel="stylesheet" href="screen.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
   </head>
   <body>
-    <h1>Home</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-      </ul>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src= "images/elelogo.png" alt="Logo" width="100" height="100"
+            class="d-inline-block align-text-center">
+          Jomo Kenyatta International Airport
+        </a>
+      </div>
     </nav>
-    <script src="index.js"></script>
+    <p class="text-center"></p>
+      <h2>Thanks for flying with us!</h2>
+    <form class="row g-3">
+      <div class="col-md-6">
+        <label for="inputEmail4" class="form-label">First Name</label>
+        <input type="email" class="form-control" id="inputEmail4">
+      </div>
+      <div class="col-md-6">
+        <label for="inputPassword4" class="form-label">Last Name</label>
+        <input type="password" class="form-control" id="inputPassword4">
+      </div>
+      <div class="col-md-6">
+        <label for="inputAddress2" class="form-label">Email</label>
+        <input type="text" class="form-control" id="inputAddress2">
+      </div>
+      <div class="col-md-6">
+        <label for="inputCity" class="form-label">Phone Number</label>
+        <input type="text" class="form-control" id="inputCity">
+      </div>
+      <h2>Please rate us based on following categories</h2>
+      <div class="col-md-6">
+        <label for="customRange4" class="form-label">Cleanliness of Airport</label>
+        <input type="range" class="form-range" min="1" max="10" value="1" id="customRange4">
+        <output for="customRange4" id="rangeValue" aria-hidden="true"></output>
+        
+        <script>
+          const rangeInput = document.getElementById('customRange4');
+          const rangeOutput = document.getElementById('rangeValue');
+
+          rangeOutput.textContent = rangeInput.value;
+
+          rangeInput.addEventListener('input', function () {
+            rangeOutput.textContent = this.value;
+          });
+        </script>
+      </div>
+      <div class="col-md-6">
+        <label for="customRange5" class="form-label">Friendliness of Airport Staff</label>
+        <input type="range" class="form-range" min="1" max="10" value="1" id="customRange5">
+        <output for="customRange5" id="rangeValue2" aria-hidden="true"></output>
+        
+        <script>
+          const rangeInput2 = document.getElementById('customRange5');
+          const rangeOutput2 = document.getElementById('rangeValue2');
+
+          rangeOutput2.textContent = rangeInput2.value;
+
+          rangeInput2.addEventListener('input', function () {
+            rangeOutput2.textContent = this.value;
+          });
+        </script>
+      </div>
+      <div class="col-md-6">
+        <label for="customRange6" class="form-label">Efficiency of Airport Facilities</label>
+        <input type="range" class="form-range" min="1" max="10" value="1" id="customRange6">
+        <output for="customRange6" id="rangeValue3" aria-hidden="true"></output>
+        
+        <script>
+          const rangeInput3 = document.getElementById('customRange6');
+          const rangeOutput3 = document.getElementById('rangeValue3');
+
+          rangeOutput3.textContent = rangeInput.value;
+
+          rangeInput3.addEventListener('input', function () {
+            rangeOutput3.textContent = this.value;
+          });
+        </script>
+      </div>
+      <div class="col-md-6">
+        <label for="customRange7" class="form-label">Overall Experience</label>
+        <input type="range" class="form-range" min="1" max="10" value="1" id="customRange7">
+        <output for="customRange7" id="rangeValue4" aria-hidden="true"></output>
+        
+        <script>
+          const rangeInput4 = document.getElementById('customRange7');
+          const rangeOutput4 = document.getElementById('rangeValue4');
+
+          rangeOutput4.textContent = rangeInput4.value;
+
+          rangeInput4.addEventListener('input', function () {
+            rangeOutput4.textContent = this.value;
+          });
+        </script>
+      </div>
+      <label for="form-floating" class="form-label">Leave any additional comments below: </label>
+      <div class="form-floating">
+        <textarea class="form-control" placeholder="Leave a comment here"  id="floatingTextarea2"
+          style="height: 100px"></textarea>
+        <label for="floatingTextarea2">Comments</label>
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js" integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK" crossorigin="anonymous"></script>
   </body>
 </html>
